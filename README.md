@@ -5,6 +5,8 @@ This is a sample code for a Microsoft Graph Power BI Custom Connector
 
 You need to Register a new App in Azure and configure appropriate permissions to Graph.
 
+## Azure App Registration
+
 - Open the Azure Portal as Admin
 - Select Azure Active Directory, click Add Registrations
 - Click New Registration, give a name for the App. In Redirect URI, select Web and use https://oauth.powerbi.com/views/oauthredirect.html
@@ -14,6 +16,7 @@ You need to Register a new App in Azure and configure appropriate permissions to
 - Go to overview and store the value for the Application Client ID, you will need it to configure the connector.
 - Close the Azure Portal
 
+## Building and deploying the solution
 
 - You will need Visual Studio 2017 or 2019 to build de solution
 - Install the Power Query SDK from the Visual Studio Marketplace
@@ -26,6 +29,13 @@ You need to Register a new App in Azure and configure appropriate permissions to
 - Open Power BI Desktop and change Data Extensions security option to allow the extension to load without any warnings
 - Restart Power BI Desktop
 
+## Using the custom connector on Power BI
+
 - Open Get Data and Search for MyGraph
 - Paste the Graph GET URL and load the data into Power BI
 
+## Dataset updates 
+
+It is important to mention that dataset refreshes are only possible using Power BI Desktop or through the On Premises Data Gateway at this moment (May 2020). 
+ODG now offers the ability to have custom connectors installed/configured and it is possible to start DataSet refreshed from the service through custom connectors 
+hosted on ODG. 
